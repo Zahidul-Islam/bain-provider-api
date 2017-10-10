@@ -13,7 +13,6 @@ if (process.env.NODE_ENV !== 'production' || process.env.TravisCI) {
 }
 
 const DB_URL = process.env.DB_URL;
-console.log('==> ' + DB_URL)
 
 mongoose.Promise = global.Promise;
 mongoose.connect(DB_URL, { useMongoClient: true });
@@ -21,7 +20,7 @@ mongoose.connect(DB_URL, { useMongoClient: true });
 chai.use(chaiHttp);
 
 describe('Provider', () => {
-  before(() => {
+  before(done => {
     Provider.findOne()
       .then(provider => {
         if (!provider) {
@@ -31,6 +30,7 @@ describe('Provider', () => {
           done();
         }
       });
+      done();
   });
 
   describe('GET /providers', () => {
@@ -45,7 +45,7 @@ describe('Provider', () => {
         });
     });
 
-    it('GET /providers?min_discharges', (done) => {
+    it('GET /providers?min_discharges', done => {
       chai.request(server)
         .get('/providers?min_discharges=6')
         .end((err, res) => {
@@ -287,6 +287,10 @@ describe('Provider', () => {
           res.body[0]['Provider State'].should.be.equal('CA')
           done();
         });
+    });
+
+    after(() => {
+      process.exit();
     });
   });
 });

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon index",
     "start": "node index.js",
-    "test": "mocha test/**/*.spec.js --reporter spec --timeout 80000",
+    "test": "mocha test/**/*.spec.js --bail --reporter spec --timeout 80000",
     "sync": "node util/dataSync"
   },
   "author": "Zahidul Islam <zahidsharp@outlook.com>",

@@ -2,6 +2,23 @@
 
 An internal API test for a national healthcare provider
 
+## Architecture
+
+This is a small microservice backed by MongoDB hosted database solution [mLab](https://mlab.com). RESTful api is written in [Express.js](https://expressjs.com/), Node.js and JavaScript.
+
+There is a module for data sync process. It is a command line tool that download the providers information from csv url ```(DATA_URL)```. It then parse the csv into Json and save it into MongoDB. You will find more detail about how to use it later in this document.
+
+The main reason for choosing Node.js is its no-blocking nature. Node can server large number of request without blocking the main thread. Express is one of the best Web framework in Node ecosystem.
+
+I have chosen MongoDB document database because of it's flexible schema, scalability and simplicity.
+
+Tests are written using [Mocha](https://mochajs.org/) unit testing framework.
+
+I am also using [Travis CI](https://travis-ci.org) for continus integration and testing. 
+
+Finally I have hosted this API in Heroku. Here is the [demo url](https://bain-provider-api.herokuapp.com/).
+
+
 ## Getting Started
 
 ### Prerequisites
