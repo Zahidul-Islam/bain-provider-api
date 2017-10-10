@@ -1,0 +1,28 @@
+{
+  "name": "bain-provider-api",
+  "version": "1.0.0",
+  "description": "Internal API for a national healthcare provider",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index",
+    "start": "node index.js",
+    "test": "mocha test/**/*.spec.js --reporter spec --timeout 10000",
+    "sync": "node util/dataSync"
+  },
+  "author": "Zahidul Islam <zahidsharp@outlook.com>",
+  "license": "MIT",
+  "dependencies": {
+    "csvtojson": "1.1.8",
+    "dotenv": "4.0.0",
+    "express": "4.16.1",
+    "mongoose": "4.12.0",
+    "request": "2.83.0"
+  },
+  "devDependencies": {
+    "chai": "4.1.2",
+    "chai-http": "3.0.0",
+    "mocha": "4.0.1",
+    "nodemon": "1.12.1",
+    "sinon": "4.0.1"
+  }
+}
