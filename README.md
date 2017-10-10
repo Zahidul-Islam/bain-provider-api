@@ -1,4 +1,4 @@
-# Bain Provider API
+# Bain Provider API [![Build Status](https://travis-ci.org/Zahidul-Islam/bain-provider-api.svg?branch=master)](https://travis-ci.org/Zahidul-Islam/bain-provider-api)
 
 An internal API test for a national healthcare provider
 
