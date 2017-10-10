@@ -17,9 +17,7 @@ mongoose.Promise   = global.Promise;
 mongoose.connect(DB_URL, { useMongoClient: true });
 
 
-appRouter.get('/', (req, res) => res.json({ message: `Welcome to API. Please try example GET /providers?max_discharges=500
-                                                    &min_discharges=100&max_average_covered_charges=50000&min_average_covered_charges=40000
-                                                    &min_average_medicare_payments=6000&max_average_medicare_payments=10000&state=GA` }));
+appRouter.get('/', (req, res) => res.json({ message: 'Welcome to API. Please try GET /providers' }));
 
 appRouter.get('/providers', (req, res) => {
     const {

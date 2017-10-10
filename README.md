@@ -61,7 +61,7 @@ npm test
 
 ## Deployment
 
-API is hosted in Heroku. Here is the [demo]().
+API is hosted in Heroku. Here is the [demo](https://bain-provider-api.herokuapp.com).
 
 ## Built With
 
