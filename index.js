@@ -7,7 +7,7 @@ const Provider     = require('./model/provider');
 const queryBuilder = require('./util/queryBuilder');
 const appRouter    = express.Router();
 
-if(process.env.NODE_ENV !== 'production') {
+if(process.env.NODE_ENV !== 'production' || process.env.TravisCI) {
     require('dotenv').config();    
 }
 

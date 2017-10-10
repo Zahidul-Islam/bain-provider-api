@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon index",
     "start": "node index.js",
-    "test": "mocha test/**/*.spec.js --reporter spec --timeout 10000",
+    "test": "mocha test/**/*.spec.js --reporter spec --timeout 80000",
     "sync": "node util/dataSync"
   },
   "author": "Zahidul Islam <zahidsharp@outlook.com>",
@@ -26,7 +26,7 @@
     "sinon": "4.0.1"
   },
   "engines": {
-   "node": "8.4.x",
-   "npm": "5.4.x" 
+    "node": "8.4.x",
+    "npm": "5.4.x"
   }
 }
