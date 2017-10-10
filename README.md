@@ -14,10 +14,13 @@ I have chosen MongoDB document database because of it's flexible schema, scalabi
 
 Tests are written using [Mocha](https://mochajs.org/) unit testing framework.
 
-I am also using [Travis CI](https://travis-ci.org) for continus integration and testing. 
+I am also using [Travis CI](https://travis-ci.org) for continus integration, deployment and testing. 
 
 Finally I have hosted this API in Heroku. Here is the [demo url](https://bain-provider-api.herokuapp.com/).
 
+##### CI/CD
+
+As soon as I commit my code in GitHub Travis trigger a build and tests. After all test pass Travis trigger Heroku deployment.
 
 ## Getting Started
 
