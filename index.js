@@ -21,7 +21,7 @@ appRouter.get('/', (req, res) => res.json({ message: `Welcome to API. Please try
                                                     &min_discharges=100&max_average_covered_charges=50000&min_average_covered_charges=40000
                                                     &min_average_medicare_payments=6000&max_average_medicare_payments=10000&state=GA` }));
 
-appRouter.get('/providers', async (req, res) => {
+appRouter.get('/providers', (req, res) => {
     const {
         max_discharges,
         min_discharges,
