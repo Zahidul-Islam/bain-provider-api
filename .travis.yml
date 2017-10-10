@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- 8.0.x
+  - 8.0.x
 env:
   - TravisCI=true
   - DATA_URL=https://s3-us-west-2.amazonaws.com/bain-coding-challenge/Inpatient_Prospective_Payment_System__IPPS__Provider_Summary_for_the_Top_100_Diagnosis-Related_Groups__DRG__-_FY2011.csv  
