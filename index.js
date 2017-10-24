@@ -16,20 +16,9 @@ const DB_URL = process.env.DB_URL;
 mongoose.Promise   = global.Promise;
 mongoose.connect(DB_URL, { useMongoClient: true });
 
-
 appRouter.get('/', (req, res) => res.json({ message: 'Welcome to API. Please try GET /providers' }));
 
 appRouter.get('/providers', (req, res) => {
-    const {
-        max_discharges,
-        min_discharges,
-        max_average_covered_charges,
-        min_average_covered_charges,
-        min_average_medicare_payments,
-        max_average_medicare_payments,
-        state,
-    } = req.query;
-    
     const query = queryBuilder.build(req.query, Provider.find());
     query.exec()
         .then(providers => providers.map(item => ({
@@ -50,6 +39,5 @@ appRouter.get('/providers', (req, res) => {
 
 app.use(appRouter);
 app.listen(port, () => console.log('API server is running on port: ' + port));
-
 
 module.exports = app;

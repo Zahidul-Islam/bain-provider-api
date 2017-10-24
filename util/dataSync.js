@@ -7,7 +7,7 @@ if(process.env.NODE_ENV !== 'production') {
 } 
 
 const DATA_URL = process.env.DATA_URL;
-const DB_URL = process.env.DB_URL || 'mongodb://bain:bain@ds113835.mlab.com:13835/provider-db';
+const DB_URL = process.env.DB_URL;
 
 const conn = mongoose.connect(DB_URL, { useMongoClient: true });
 const Provider = require('../model/provider');
@@ -40,9 +40,9 @@ let runDataSync = (url) => {
                 providerStreetAddress,
                 providerCity,
                 providerState,
-                providerZipCode: providerZipCode.match(/[\d.]+/g)[0],
+                providerZipCode,
                 hospitalReferralRegionDescription,
-                totalDischarges: totalDischarges.match(/[\d.]+/g)[0],
+                totalDischarges,
                 averageCoveredCharges: averageCoveredCharges.match(/[\d.]+/g)[0],
                 averageMedicarePayments: averageMedicarePayments.match(/[\d.]+/g)[0],
                 averageMedicarePayments: averageMedicarePayments.match(/[\d.]+/g)[0],
